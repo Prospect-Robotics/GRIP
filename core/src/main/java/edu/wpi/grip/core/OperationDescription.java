@@ -165,6 +165,7 @@ public class OperationDescription {
     LOGICAL,
     OPENCV,
     MISCELLANEOUS,
+    MATH
   }
 
   /**

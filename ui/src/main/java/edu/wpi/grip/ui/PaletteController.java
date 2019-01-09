@@ -30,6 +30,7 @@ public class PaletteController {
   @FXML private Tab networkOperations;
   @FXML private Tab logicalOperations;
   @FXML private Tab opencvOperations;
+  @FXML private Tab mathOperations;
   @FXML private Tab miscellaneousOperations;
 
   @FXML
@@ -50,6 +51,7 @@ public class PaletteController {
     networkOperations.setUserData(OperationDescription.Category.NETWORK);
     logicalOperations.setUserData(OperationDescription.Category.LOGICAL);
     opencvOperations.setUserData(OperationDescription.Category.OPENCV);
+    mathOperations.setUserData(OperationDescription.Category.MATH);
     miscellaneousOperations.setUserData(OperationDescription.Category.MISCELLANEOUS);
 
     // Bind the filterText of all of the individual tabs to the search field
@@ -65,6 +67,8 @@ public class PaletteController {
       logicalOperations.getProperties().put(OperationListController.FILTER_TEXT, operationSearch
           .getText());
       opencvOperations.getProperties().put(OperationListController.FILTER_TEXT, operationSearch
+          .getText());
+      mathOperations.getProperties().put(OperationListController.FILTER_TEXT, operationSearch
           .getText());
       miscellaneousOperations.getProperties().put(OperationListController.FILTER_TEXT,
           operationSearch.getText());

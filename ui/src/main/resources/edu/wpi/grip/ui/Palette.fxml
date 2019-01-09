@@ -15,6 +15,7 @@
         <fx:include source="OperationList.fxml" fx:id="networkOperations" text="Network" />
         <fx:include source="OperationList.fxml" fx:id="logicalOperations" text="Logical" />
         <fx:include source="OperationList.fxml" fx:id="opencvOperations" text="OpenCV" />
+        <fx:include source="OperationList.fxml" fx:id="mathOperations" text="Math" />
         <fx:include source="OperationList.fxml" fx:id="miscellaneousOperations" text="Misc." />
     </TabPane>
     <CustomTextField fx:id="operationSearch" promptText="Search" />

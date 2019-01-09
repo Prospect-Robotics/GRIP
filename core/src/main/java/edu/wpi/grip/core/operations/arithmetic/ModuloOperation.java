@@ -12,7 +12,7 @@ import javax.inject.Inject;
         summary = "Modulo two numbers", //TODO: bad summary
         category = OperationDescription.Category.MATH
 )
-public class ModuloOperation extends ArithmeticOperation{
+public class ModuloOperation extends TwoVariableMathOperation {
 
     @Inject
     public ModuloOperation(InputSocket.Factory inputSocketFactory, OutputSocket.Factory outputSocketFactory){
@@ -20,7 +20,7 @@ public class ModuloOperation extends ArithmeticOperation{
     }
 
     @Override
-    protected Number arithmeticOperation(Number leftHand, Number rightHand){
+    protected Number operation(Number leftHand, Number rightHand){
         return leftHand.doubleValue() % rightHand.doubleValue();
     }
 }

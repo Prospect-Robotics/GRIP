@@ -12,7 +12,7 @@ import javax.inject.Inject;
         summary = "Multiply two numbers",
         category = OperationDescription.Category.MATH
 )
-public class MultiplyOperation extends ArithmeticOperation{
+public class MultiplyOperation extends TwoVariableMathOperation {
 
     @Inject
     public MultiplyOperation(InputSocket.Factory inputSocketFactory, OutputSocket.Factory outputSocketFactory){
@@ -20,7 +20,7 @@ public class MultiplyOperation extends ArithmeticOperation{
     }
 
     @Override
-    protected Number arithmeticOperation(Number leftHand, Number rightHand){
+    protected Number operation(Number leftHand, Number rightHand){
         return leftHand.doubleValue() * rightHand.doubleValue();
     }
 }

@@ -12,7 +12,7 @@ import javax.inject.Inject;
         summary = "Subtract one number by another",
         category = OperationDescription.Category.MATH
 )
-public class SubtractOperation extends ArithmeticOperation{
+public class SubtractOperation extends TwoVariableMathOperation {
 
     @Inject
     public SubtractOperation(InputSocket.Factory inputSocketFactory, OutputSocket.Factory outputSocketFactory){
@@ -20,7 +20,7 @@ public class SubtractOperation extends ArithmeticOperation{
     }
 
     @Override
-    protected Number arithmeticOperation(Number leftHand, Number rightHand){
+    protected Number operation(Number leftHand, Number rightHand){
         return leftHand.doubleValue() - rightHand.doubleValue();
     }
 }

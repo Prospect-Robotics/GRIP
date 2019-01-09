@@ -12,7 +12,7 @@ import javax.inject.Inject;
         summary = "Divide one number by another",
         category = OperationDescription.Category.MATH
 )
-public class DivideOperation extends ArithmeticOperation{
+public class DivideOperation extends TwoVariableMathOperation {
 
     @Inject
     public DivideOperation(InputSocket.Factory inputSocketFactory, OutputSocket.Factory outputSocketFactory){
@@ -20,7 +20,7 @@ public class DivideOperation extends ArithmeticOperation{
     }
 
     @Override
-    protected Number arithmeticOperation(Number leftHand, Number rightHand){
+    protected Number operation(Number leftHand, Number rightHand){
         return leftHand.doubleValue() / rightHand.doubleValue();
     }
 }
